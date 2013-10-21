@@ -1,0 +1,15 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="7">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="648" startPos="127" endPos="127" selMode="0" lang="PHP" encoding="-1" filename="F:\xampp\xampp\htdocs\gen\protected\views\site\register.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1192" startPos="2383" endPos="2383" selMode="0" lang="PHP" encoding="-1" filename="F:\xampp\xampp\htdocs\gen\protected\views\site\_registerform.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="624" startPos="139" endPos="139" selMode="0" lang="PHP" encoding="-1" filename="F:\xampp\xampp\htdocs\gen\protected\views\site\finished.php" />
+            <File firstVisibleLine="35" xOffset="0" scrollWidth="1032" startPos="2474" endPos="2474" selMode="0" lang="PHP" encoding="-1" filename="F:\xampp\xampp\htdocs\gen\protected\controllers\SiteController.php" />
+            <File firstVisibleLine="36" xOffset="0" scrollWidth="1472" startPos="1692" endPos="1692" selMode="0" lang="PHP" encoding="-1" filename="F:\xampp\xampp\htdocs\gen\protected\models\DoctorModel.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="648" startPos="180" endPos="180" selMode="0" lang="PHP" encoding="-1" filename="F:\xampp\xampp\htdocs\gen\protected\views\site\login.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="880" startPos="857" endPos="857" selMode="0" lang="PHP" encoding="-1" filename="F:\xampp\xampp\htdocs\gen\protected\views\site\forgotpassword.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="632" startPos="438" endPos="438" selMode="0" lang="PHP" encoding="-1" filename="F:\xampp\xampp\htdocs\gen\protected\models\ForgotPasswordForm.php" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>
