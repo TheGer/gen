@@ -66,12 +66,49 @@
         ?> 
         <?php echo $form->error($model, 'dateofbirth'); ?>
     </div>
-
-    <div class="row">
-        <?php echo $form->labelEx($model, 'informedconsent'); ?>
-        <?php echo $form->textField($model, 'informedconsent', array('size' => 60, 'maxlength' => 100)); ?>
-        <?php echo $form->error($model, 'informedconsent'); ?>
+    
+     <div class="row">
+        <?php echo $form->labelEx($model, 'height'); ?>
+        <?php echo $form->textField($model, 'height'); ?>
+        <?php echo $form->error($model, 'height'); ?>
     </div>
+    
+     <div class="row">
+        <?php echo $form->labelEx($model, 'weight'); ?>
+        <?php echo $form->textField($model, 'weight'); ?>
+        <?php echo $form->error($model, 'weight'); ?>
+    </div>
+    
+    <div class="row">
+        <?php echo $form->labelEx($model, 'participationform'); ?>
+          <?php echo $form->dropDownList($model, 'participationform', GeneralUtils::enumItem($model, 'participationform')); ?>
+        <?php echo $form->error($model, 'participationform'); ?>
+    </div>
+    
+     <div class="row">
+        <?php echo $form->labelEx($model, 'verification'); ?>
+        <?php echo $form->textField($model, 'verification'); ?>
+        <?php echo $form->error($model, 'verification'); ?>
+    </div>
+    <div class="row">
+        <?php echo $form->labelEx($model, 'dateofsignedform'); ?>
+        <?php
+        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+            'model' => $model, // Model object
+            'attribute' => 'dateofsignedform', // Attribute name
+            'options' => array(
+                'showAnim' => 'fold',
+            ), // jquery plugin options
+            'htmlOptions' => array('style' => 'height:20px;') // HTML options
+        ));
+        ?> 
+        <?php echo $form->error($model, 'dateofsignedform'); ?>
+    </div>
+    <hr/>
+    <h4>Eligibility</h4>
+    
+    
+    
 
     <div class="row">
         <?php echo $form->labelEx($model, 'confirmedmutation'); ?>
