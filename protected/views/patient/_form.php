@@ -106,10 +106,30 @@
     </div>
     <hr/>
     <h4>Eligibility</h4>
+     <div class="row">
+        <?php echo $form->labelEx($model, 'crfform'); ?>
+          <?php echo $form->dropDownList($model, 'crfform', GeneralUtils::enumItem($model, 'crfform')); ?>
+        <?php echo $form->error($model, 'crfform'); ?>
+    </div>
     
+      <div class="row">
+        <?php echo $form->labelEx($model, 'crfaffirmation'); ?>
+        <?php echo $form->textField($model, 'crfaffirmation'); ?>
+        <?php echo $form->error($model, 'crfaffirmation'); ?>
+    </div>
+       <div class="row">
+        <?php echo $form->labelEx($model, 'excludeform'); ?>
+          <?php echo $form->dropDownList($model, 'excludeform', GeneralUtils::enumItem($model, 'excludeform')); ?>
+        <?php echo $form->error($model, 'excludeform'); ?>
+    </div>
     
-    
+      <div class="row">
+        <?php echo $form->labelEx($model, 'excludeaffirmation'); ?>
+        <?php echo $form->textField($model, 'excludeaffirmation'); ?>
+        <?php echo $form->error($model, 'excludeaffirmation'); ?>
+    </div>
 
+    
     <div class="row">
         <?php echo $form->labelEx($model, 'confirmedmutation'); ?>
           <?php echo $form->dropDownList($model, 'confirmedmutation', GeneralUtils::enumItem($model, 'confirmedmutation')); ?>
@@ -136,6 +156,9 @@
             'attribute' => 'establishedat', // Attribute name
             'options' => array(
                 'showAnim' => 'fold',
+                'changeYear'=>'true',
+                'yearRange'=> '1900:2020',
+                
             ), // jquery plugin options
             'htmlOptions' => array('style' => 'height:20px;') // HTML options
         ));
@@ -143,9 +166,27 @@
         <?php echo $form->error($model, 'establishedat'); ?>
     </div>
 
-    <div class="row">
         
-       
+    <div class="row">
+        <?php echo $form->labelEx($model, 'establishedat2'); ?>
+        <?php
+        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+            'model' => $model, // Model object
+            'attribute' => 'establishedat2', // Attribute name
+            'options' => array(
+                'showAnim' => 'fold',
+                'changeYear'=>'true',
+                'yearRange'=> '1900:2020',
+                
+            ), // jquery plugin options
+            'htmlOptions' => array('style' => 'height:20px;') // HTML options
+        ));
+        ?> 
+        <?php echo $form->error($model, 'establishedat2'); ?>
+    </div>
+
+    <div class="row">    
+        
         <?php echo $form->labelEx($model, 'diagnosiskeys'); ?>
         <?php echo $form->textArea($model, 'diagnosiskeys', array('rows' => 6, 'cols' => 50)); ?>
         <?php echo $form->error($model, 'diagnosiskeys'); ?>

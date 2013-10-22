@@ -14,6 +14,7 @@
  * @property string $confirmedby
  * @property integer $diagnosis
  * @property string $establishedat
+ * @property string $establishedat2
  * @property string $diagnosiskeys
  * @property string $description
  * @property string $secondarydiagnosisexisting
@@ -70,12 +71,19 @@
  * @property string $participationform
  * @property string $verification
  * @property string $dateofsignedform
+ * 
+ * 
+ * 
  * @property string $actualsystemictreatment
  * @property string $actualvitamin
  * @property string $surgeries
  * @property string $traumas
  * @property string $systemicinfections
- *
+ * @property string $crfform
+ * @property string $crfaffirmation
+ *@property string $excludeform
+ * @property string $excludeaffirmation
+ * 
  * The followings are the available model relations:
  * @property Doctorpatient[] $doctorpatients
  * @property Patientcenter[] $patientcenters
@@ -114,17 +122,17 @@ class Patient extends CActiveRecord {
         return array(
             //     array('hearingproblemslevel, communcationmode, hearingdevicead, hearingdeviceas, cochlearad, cochlearas', 'required'),
             array('diagnosis, scotome, nightblindnessage, phosphenes, decreasedvisualacage, sensibilitytolightage, colourvisionage, sidevisionage, nystagmus, numberofaffectedfamilymembers, numberofchildrenaffected, numberofchildrennonaffected, numberofchildrenunknownstatus, numberofsiblingsaffected, numberofsiblingsnotaffected, numberofsiblingsunknown, numberoftwinsaffected, numberoftwinsnotaffected, numberoftwinsunknown,opthalmologytrauma, opthalmologyinfection, walkingage, articulationage, hearingproblems, cochlearad, cochlearas, height, weight', 'numerical', 'integerOnly' => true),
-            array('systemid, gender, placeofbirth, informedconsent, confirmedby, secondarydiagnosisexisting, sensibilitytolight, clearvision, sidevision, readingdifficulties, parentsorigin, siblings, twins, pedigreeavailable, othersurgery', 'length', 'max' => 100),
+            array('systemid, gender, placeofbirth, informedconsent, confirmedby, secondarydiagnosisexisting, sensibilitytolight, clearvision, sidevision, readingdifficulties, parentsorigin, siblings, twins, pedigreeavailable, othersurgery, crfaffirmation,crfform,excludeform,excludeaffirmation', 'length', 'max' => 100),
             array('confirmedmutation', 'length', 'max' => 3),
             array('sporadicorfamily, cosanguinity, children, participationform, actualsystemictreatment, actualvitamin, surgeries, traumas, systemicinfections', 'length', 'max' => 14),
             array('actualvisiualrehabilitation', 'length', 'max' => 7),
             array('hearingcharacter, hearingdevicead, hearingdeviceas', 'length', 'max' => 11),
             array('hearingproblemslevel', 'length', 'max' => 8),
             array('communcationmode', 'length', 'max' => 29),
-            array('dateofbirth, establishedat, diagnosiskeys, description, secondarydiagnosiskeys, othercomments, surgerycomments, verification, dateofsignedform', 'safe'),
+            array('dateofbirth, establishedat,establishedat2, diagnosiskeys, description, secondarydiagnosiskeys, othercomments, surgerycomments, verification, dateofsignedform', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, systemid, gender, placeofbirth, dateofbirth, informedconsent, confirmedmutation, confirmedby, diagnosis, establishedat, diagnosiskeys, description, secondarydiagnosisexisting, secondarydiagnosiskeys, othercomments, scotome, nightblindnessage, phosphenes, decreasedvisualacage, sensibilitytolight, sensibilitytolightage, clearvision, colourvisionage, sidevision, sidevisionage, readingdifficulties, nystagmus, parentsorigin, sporadicorfamily, cosanguinity, numberofaffectedfamilymembers, children, numberofchildrenaffected, numberofchildrennonaffected, numberofchildrenunknownstatus, siblings, numberofsiblingsaffected, numberofsiblingsnotaffected, numberofsiblingsunknown, twins, numberoftwinsaffected, numberoftwinsnotaffected, numberoftwinsunknown, pedigreeavailable, cataractod, cataractos, othersurgery, surgerycomments, opthalmologytrauma, opthalmologyinfection, actualvisiualrehabilitation, walkingage, articulationage, hearingproblems, hearingcharacter, hearingproblemslevel, communcationmode, hearingdevicead, hearingdeviceas, cochlearad, cochlearas, height, weight, participationform, verification, dateofsignedform, actualsystemictreatment, actualvitamin, surgeries, traumas, systemicinfections', 'safe', 'on' => 'search'),
+            array('id, systemid, gender, placeofbirth, dateofbirth, informedconsent, confirmedmutation, confirmedby, diagnosis, establishedat,establishedat2, diagnosiskeys, description, secondarydiagnosisexisting, secondarydiagnosiskeys, othercomments, scotome, nightblindnessage, phosphenes, decreasedvisualacage, sensibilitytolight, sensibilitytolightage, clearvision, colourvisionage, sidevision, sidevisionage, readingdifficulties, nystagmus, parentsorigin, sporadicorfamily, cosanguinity, numberofaffectedfamilymembers, children, numberofchildrenaffected, numberofchildrennonaffected, numberofchildrenunknownstatus, siblings, numberofsiblingsaffected, numberofsiblingsnotaffected, numberofsiblingsunknown, twins, numberoftwinsaffected, numberoftwinsnotaffected, numberoftwinsunknown, pedigreeavailable, cataractod, cataractos, othersurgery, surgerycomments, opthalmologytrauma, opthalmologyinfection, actualvisiualrehabilitation, walkingage, articulationage, hearingproblems, hearingcharacter, hearingproblemslevel, communcationmode, hearingdevicead, hearingdeviceas, cochlearad, cochlearas, height, weight, participationform, verification, dateofsignedform, actualsystemictreatment, actualvitamin, surgeries, traumas, systemicinfections, crfaffirmation,crfform,excludeform,excludeaffirmation', 'safe', 'on' => 'search'),
         );
     }
 
@@ -184,8 +192,9 @@ class Patient extends CActiveRecord {
             'confirmedmutation' => 'Confirmed mutation',
             'confirmedby' => 'Confirmed by',
             'diagnosis' => 'Diagnosis',
-            'establishedat' => 'Established at',
-            'diagnosiskeys' => 'Diagnosis keys',
+            'establishedat' => 'Usher syndrome diagnosis appeared for first time',
+            'establishedat2'=> 'Retinitis pigmentosa diagnosis appeared for first time',
+            'diagnosiskeys' => 'Concomitant diseases',
             'description' => 'Description',
             'secondarydiagnosisexisting' => 'Existing',
             'secondarydiagnosiskeys' => 'Secondary diagnosis keys',
@@ -246,6 +255,10 @@ class Patient extends CActiveRecord {
             'surgeries' => 'Surgeries',
             'traumas' => 'Traumas',
             'systemicinfections' => 'Systemic infections',
+            'crfform' => 'I affirm that a signed CRF form confirming a subject is eligible for this study exists on file for this subject',
+            'crfaffirmation' => 'Verification affirmation initials',
+            'excludeform' => 'I affirm that a signed exclusion form confirming the subject wishes to be excluded from this study exists on file for this subject',
+            'excludeaffirmation' => 'Verification affirmation initials',
         );
     }
 
