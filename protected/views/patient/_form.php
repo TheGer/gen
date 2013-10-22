@@ -191,6 +191,32 @@
         <?php echo $form->textArea($model, 'diagnosiskeys', array('rows' => 6, 'cols' => 50)); ?>
         <?php echo $form->error($model, 'diagnosiskeys'); ?>
     </div>
+    
+    <div class="row">
+        <?php echo $form->labelEx($model, 'actualsystemictreatment'); ?>
+          <?php echo $form->dropDownList($model, 'actualsystemictreatment', GeneralUtils::enumItem($model, 'actualsystemictreatment')); ?>
+        <?php echo $form->error($model, 'actualsystemictreatment'); ?>
+    </div>
+     <div class="row">
+        <?php echo $form->labelEx($model, 'actualvitamin'); ?>
+          <?php echo $form->dropDownList($model, 'actualvitamin', GeneralUtils::enumItem($model, 'actualvitamin')); ?>
+        <?php echo $form->error($model, 'actualvitamin'); ?>
+    </div> 
+    <div class="row">
+        <?php echo $form->labelEx($model, 'surgeries'); ?>
+          <?php echo $form->dropDownList($model, 'surgeries', GeneralUtils::enumItem($model, 'surgeries')); ?>
+        <?php echo $form->error($model, 'surgeries'); ?>
+    </div> 
+    <div class="row">
+        <?php echo $form->labelEx($model, 'traumas'); ?>
+          <?php echo $form->dropDownList($model, 'traumas', GeneralUtils::enumItem($model, 'traumas')); ?>
+        <?php echo $form->error($model, 'traumas'); ?>
+    </div> 
+    <div class="row">
+        <?php echo $form->labelEx($model, 'systemicinfections'); ?>
+          <?php echo $form->dropDownList($model, 'systemicinfections', GeneralUtils::enumItem($model, 'systemicinfections')); ?>
+        <?php echo $form->error($model, 'systemicinfections'); ?>
+    </div>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'description'); ?>
@@ -367,12 +393,23 @@
         <?php echo $form->error($model, 'parentsorigin'); ?>
     </div>
 
-    
+     <div class="row">
+        <?php echo $form->labelEx($model, 'motherorigin'); ?>
+        <?php echo $form->textField($model, 'motherorigin', array('size' => 60, 'maxlength' => 100)); ?>
+        <?php echo $form->error($model, 'motherorigin'); ?>
+    </div>
 
+    
     <div class="row">
         <?php echo $form->labelEx($model, 'cosanguinity'); ?>
         <?php echo $form->dropDownList($model, 'cosanguinity', GeneralUtils::consanguinity(), array('not applicable' => 'Not applicable')); ?>
         <?php echo $form->error($model, 'cosanguinity'); ?>
+    </div>
+    
+    <div class="row">
+        <?php echo $form->labelEx($model, 'affectedfamilymembers'); ?>
+          <?php echo $form->dropDownList($model, 'affectedfamilymembers', GeneralUtils::enumItem($model, 'affectedfamilymembers')); ?>
+        <?php echo $form->error($model, 'affectedfamilymembers'); ?>
     </div>
 
     <div class="row">
@@ -383,86 +420,8 @@
 
     
    
-    
-    
-    <div class="row">
-        <?php echo $form->labelEx($model, 'children'); ?>
-        <?php echo $form->dropDownList($model, 'children', GeneralUtils::getOptions(), array('empty' => 'Not applicable')); ?>
-        <?php echo $form->error($model, 'children'); ?>
-    </div>
-
-    <div class="row">
-        <?php echo $form->labelEx($model, 'numberofchildrenaffected'); ?>
-        <?php echo $form->textField($model, 'numberofchildrenaffected'); ?>
-        <?php echo $form->error($model, 'numberofchildrenaffected'); ?>
-    </div>
-
-    <div class="row">
-        <?php echo $form->labelEx($model, 'numberofchildrennonaffected'); ?>
-        <?php echo $form->textField($model, 'numberofchildrennonaffected'); ?>
-        <?php echo $form->error($model, 'numberofchildrennonaffected'); ?>
-    </div>
-
-    <div class="row">
-        <?php echo $form->labelEx($model, 'numberofchildrenunknownstatus'); ?>
-        <?php echo $form->textField($model, 'numberofchildrenunknownstatus'); ?>
-        <?php echo $form->error($model, 'numberofchildrenunknownstatus'); ?>
-    </div>
+  
    
-
-    <div class="row">
-        <?php echo $form->labelEx($model, 'siblings'); ?>
-        <?php echo $form->dropDownList($model, 'siblings', GeneralUtils::getOptions(), array('empty' => 'Not applicable')); ?>
-        <?php echo $form->error($model, 'siblings'); ?>
-    </div>
-
-    <div class="row">
-        <?php echo $form->labelEx($model, 'numberofsiblingsaffected'); ?>
-        <?php echo $form->textField($model, 'numberofsiblingsaffected'); ?>
-        <?php echo $form->error($model, 'numberofsiblingsaffected'); ?>
-    </div>
-
-    <div class="row">
-        <?php echo $form->labelEx($model, 'numberofsiblingsnotaffected'); ?>
-        <?php echo $form->textField($model, 'numberofsiblingsnotaffected'); ?>
-        <?php echo $form->error($model, 'numberofsiblingsnotaffected'); ?>
-    </div>
-
-    <div class="row">
-        <?php echo $form->labelEx($model, 'numberofsiblingsunknown'); ?>
-        <?php echo $form->textField($model, 'numberofsiblingsunknown'); ?>
-        <?php echo $form->error($model, 'numberofsiblingsunknown'); ?>
-    </div>
- 
-    <div class="row">
-        <?php echo $form->labelEx($model, 'twins'); ?>
-        <?php echo $form->dropDownList($model, 'twins', GeneralUtils::getOptions(), array('empty' => 'Not applicable')); ?>
-        <?php echo $form->error($model, 'twins'); ?>
-    </div>
-
-    <div class="row">
-        <?php echo $form->labelEx($model, 'numberoftwinsaffected'); ?>
-        <?php echo $form->textField($model, 'numberoftwinsaffected'); ?>
-        <?php echo $form->error($model, 'numberoftwinsaffected'); ?>
-    </div>
-
-    <div class="row">
-        <?php echo $form->labelEx($model, 'numberoftwinsnotaffected'); ?>
-        <?php echo $form->textField($model, 'numberoftwinsnotaffected'); ?>
-        <?php echo $form->error($model, 'numberoftwinsnotaffected'); ?>
-    </div>
-
-    <div class="row">
-        <?php echo $form->labelEx($model, 'numberoftwinsunknown'); ?>
-        <?php echo $form->textField($model, 'numberoftwinsunknown'); ?>
-        <?php echo $form->error($model, 'numberoftwinsunknown'); ?>
-    </div>
-
-    <div class="row">
-        <?php echo $form->labelEx($model, 'pedigreeavailable'); ?>
-        <?php echo $form->dropDownList($model, 'twins', GeneralUtils::getOptions(), array('empty' => 'Not applicable')); ?>
-        <?php echo $form->error($model, 'pedigreeavailable'); ?>
-    </div>
     	<div class="row">
 		<?php echo $form->labelEx($model,'height'); ?>
 		<?php echo $form->textField($model,'height'); ?>
