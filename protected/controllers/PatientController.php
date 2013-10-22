@@ -30,7 +30,7 @@ class PatientController extends Controller {
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'update'),
+                'actions' => array('create', 'update','createpdf'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -155,6 +155,16 @@ class PatientController extends Controller {
             'dataProvider' => $dataProvider,
         ));
     }
+    
+    public function actioncreatepdf($id)
+    {
+        $model = $this->loadModel($id);
+         $mPDF1 = Yii::app()->ePdf->mpdf();
+          $mPDF1->WriteHTML($this->render('printview', array('model'=>$model), true));
+          $mPDF1->Output();
+         
+    }
+    
 
     /**
      * Manages all models.

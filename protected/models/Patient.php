@@ -82,7 +82,7 @@
  * @property string $systemicinfections
  * @property string $crfform
  * @property string $crfaffirmation
- *@property string $excludeform
+ * @property string $excludeform
  * @property string $excludeaffirmation
  * 
  * The followings are the available model relations:

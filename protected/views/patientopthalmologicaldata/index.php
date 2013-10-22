@@ -20,9 +20,10 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'dataProvider'=>$dataProvider,
 	'columns'=>array('id',
+             array('header'=>'Center id A','value'=>'$data->patientcenters[0]->centeridA'),
             'examinationdate',
              array(
 			'class'=>'CButtonColumn',
-                        'template'=>'{view}{update}{print}',
+                        'template'=>'{view}{update}',
 		),),
 )); ?>
