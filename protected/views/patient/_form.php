@@ -420,37 +420,6 @@
 
     
    
-  
-   
-    	<div class="row">
-		<?php echo $form->labelEx($model,'height'); ?>
-		<?php echo $form->textField($model,'height'); ?>
-		<?php echo $form->error($model,'height'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'weight'); ?>
-		<?php echo $form->textField($model,'weight'); ?>
-		<?php echo $form->error($model,'weight'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'participationform'); ?>
-		<?php echo $form->textField($model,'participationform',array('size'=>14,'maxlength'=>14)); ?>
-		<?php echo $form->error($model,'participationform'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'verification'); ?>
-		<?php echo $form->textArea($model,'verification',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'verification'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'dateofsignedform'); ?>
-		<?php echo $form->textField($model,'dateofsignedform'); ?>
-		<?php echo $form->error($model,'dateofsignedform'); ?>
-	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'actualsystemictreatment'); ?>

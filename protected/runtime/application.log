@@ -9917,3 +9917,6 @@ Stack trace:
 REQUEST_URI=/gen/index.php/patient/createpdf/13
 HTTP_REFERER=http://localhost:8080/gen/index.php/patient/index
 ---
+2013/10/23 05:31:21 [warning] [application] Failed to set unsafe attribute "cataractod" of "Patient".
+in C:\xampp\xampp\htdocs\gen\protected\controllers\PatientController.php (126)
+in C:\xampp\xampp\htdocs\gen\index.php (13)
