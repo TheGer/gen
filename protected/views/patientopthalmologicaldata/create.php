@@ -9,8 +9,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Phenotype Data', 'url'=>array('index')),
-	array('label'=>'Manage Phenotype Data', 'url'=>array('admin')),
+	array('label'=>'List Phenotype Data', 'url'=>array('indexofpatient','patientid'=>$patientid)),
+	array('label'=>'Manage Phenotype Data', 'url'=>array('admin','patientid'=>$patientid)),
 );
 ?>
 
