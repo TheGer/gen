@@ -39,6 +39,11 @@
         
     </div>
     
+    <div class="row">
+        <?php echo $form->labelEx($model, 'filestatus'); ?>
+          <?php echo $form->dropDownList($model, 'filestatus', GeneralUtils::enumItem($model, 'filestatus')); ?>
+        <?php echo $form->error($model, 'filestatus'); ?>
+    </div>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'gender'); ?>

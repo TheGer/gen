@@ -22,7 +22,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
         'id',
         array('header' => 'Center id A', 'value' => '$data->patientcenters[0]->centeridA'),
         array('header' => 'Responsible Physician', 'value' => '$data->patientcenters[0]->doctoridA'),
-        'filestatus',
+        array('header' => 'File Status', 'value' => '$data->filestatus'),
         array(
             'class' => 'CButtonColumn',
             'template' => '{view}{update}{print}',

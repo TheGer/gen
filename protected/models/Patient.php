@@ -73,6 +73,7 @@
  * @property string $verification
  * @property string $dateofsignedform
  * @property string $affectedfamilymembers
+ * @property string $filestatus
  * 
  * 
  * @property string $actualsystemictreatment
@@ -123,7 +124,7 @@ class Patient extends CActiveRecord {
         return array(
             //     array('hearingproblemslevel, communcationmode, hearingdevicead, hearingdeviceas, cochlearad, cochlearas', 'required'),
             array('diagnosis, scotome, nightblindnessage, phosphenes, decreasedvisualacage, sensibilitytolightage, colourvisionage, sidevisionage, nystagmus, numberofaffectedfamilymembers, numberofchildrenaffected, numberofchildrennonaffected, numberofchildrenunknownstatus, numberofsiblingsaffected, numberofsiblingsnotaffected, numberofsiblingsunknown, numberoftwinsaffected, numberoftwinsnotaffected, numberoftwinsunknown,opthalmologytrauma, opthalmologyinfection, walkingage, articulationage, hearingproblems, cochlearad, cochlearas, height, weight', 'numerical', 'integerOnly' => true),
-            array('systemid, gender, placeofbirth,affectedfamilymembers, informedconsent, confirmedby, secondarydiagnosisexisting, sensibilitytolight, clearvision, sidevision, readingdifficulties, parentsorigin,motherorigin, siblings, twins, pedigreeavailable, othersurgery, crfaffirmation,crfform,excludeform,excludeaffirmation, actualsystemictreatment, actualvitamin, surgeries, traumas, systemicinfections', 'length', 'max' => 100),
+            array('systemid, gender, placeofbirth,affectedfamilymembers, informedconsent, confirmedby, secondarydiagnosisexisting, sensibilitytolight, clearvision, sidevision, readingdifficulties, parentsorigin,motherorigin, siblings, twins, pedigreeavailable, othersurgery, crfaffirmation,crfform,excludeform,excludeaffirmation, actualsystemictreatment, actualvitamin, surgeries, traumas, systemicinfections,filestatus', 'length', 'max' => 100),
             array('confirmedmutation', 'length', 'max' => 3),
             array('sporadicorfamily, cosanguinity, children, participationform', 'length', 'max' => 14),
             array('actualvisiualrehabilitation', 'length', 'max' => 7),
@@ -261,7 +262,8 @@ class Patient extends CActiveRecord {
             'crfaffirmation' => 'Verification affirmation initials',
             'excludeform' => 'I affirm that a signed exclusion form confirming the subject wishes to be excluded from this study exists on file for this subject',
             'excludeaffirmation' => 'Verification affirmation initials',
-            'affectedfamilymembers'=>'Affected family members'
+            'affectedfamilymembers'=>'Affected family members',
+            'filestatus'=>'File Status'
         );
     }
 
@@ -358,6 +360,7 @@ class Patient extends CActiveRecord {
         $criteria->compare('surgeries', $this->surgeries, true);
         $criteria->compare('traumas', $this->traumas, true);
         $criteria->compare('systemicinfections', $this->systemicinfections, true);
+        $criteria->compare('filestatus', $this->filestatus, true);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
