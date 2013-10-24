@@ -30,8 +30,14 @@ $this->menu=array(
                   'value'=>$model->getRelatedCenters() 
                     
                 ),
+                array(
+                    'name'=>'Responsible Dr',
+                    'type'=>'html',
+                    'value'=>$model->getRelatedDoctorId()
+                ),
 		'gender',
 		'dateofbirth',
+                'filestatus',
 	),
 )); ?>
 
