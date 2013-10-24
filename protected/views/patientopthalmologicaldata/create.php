@@ -3,8 +3,9 @@
 /* @var $model Patientopthalmologicaldata */
 
 $this->breadcrumbs=array(
-	'Patientopthalmologicaldatas'=>array('index'),
-	'Create',
+	'Patients'=>array('patient/index'),
+	$patientid=>array('patient/patientStep2/'.$patientid),
+        'Create Phenotype Data',
 );
 
 $this->menu=array(
