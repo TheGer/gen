@@ -9,13 +9,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-        array('label'=>'List All Patients', 'url'=>array('/patient/index')),
-        array('label'=>'Search Patients', 'url'=>array('/patient/search')),
-	array('label'=>'Delete Patient', 'url'=>'#', 'linkOptions'=>array('submit'=>array('/patient/delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Update Center Specific Data', 'url'=>array('/site/patientStep1Update', 'id'=>$model->id)),
-        array('label'=>'Update General Patient Data', 'url'=>array('/patient/update', 'id'=>$model->id)),
-        array('label'=>'Update Genetics', 'url'=>array('/patient/genetics', 'id'=>$model->id)),
-        array('label'=>'Update Patient Phenotype', 'url'=>array('/patient/opthData', 'id'=>$model->id)),
+      array('label'=>'List All Patients', 'url'=>array('index')),
+        array('label'=>'Search Patients', 'url'=>array('search')),
+	//array('label'=>'Delete Patient', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Manage Center Specific Data', 'url'=>array('/site/patientStep1Update', 'id'=>$model->id)),
+        array('label'=>'Manage General Patient Data', 'url'=>array('update', 'id'=>$model->id)),
+        array('label'=>'Manage Genetic Data', 'url'=>array('genetics', 'id'=>$model->id)),
+        array('label'=>'Manage Phenotype Data', 'url'=>array('/patientopthalmologicaldata/indexOfPatient', 'id'=>$model->id)),
 );
 ?>
 

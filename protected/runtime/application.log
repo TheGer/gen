@@ -9993,3 +9993,54 @@ Stack trace:
 REQUEST_URI=/gen/index.php/patient/opthData/13
 HTTP_REFERER=http://saidfamily.no-ip.org:8080/gen/index.php/patient/update/13
 ---
+2013/10/24 05:34:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "opthData".' in C:\xampp\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('opthData')
+#1 C:\xampp\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('opthData')
+#2 C:\xampp\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('patient/opthDat...')
+#3 C:\xampp\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\xampp\htdocs\gen\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gen/index.php/patient/opthData/13
+HTTP_REFERER=http://localhost:8080/gen/index.php/patient/update/13
+---
+2013/10/24 05:37:04 [error] [exception.CException] exception 'CException' with message 'Property "Patientopthalmologicaldata.patientcenters" is not defined.' in C:\xampp\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('patientcenters')
+#1 C:\xampp\xampp\htdocs\yii\framework\base\CComponent.php(606) : eval()'d code(1): CActiveRecord->__get('patientcenters')
+#2 C:\xampp\xampp\htdocs\yii\framework\base\CComponent.php(606): eval()
+#3 C:\xampp\xampp\htdocs\yii\framework\zii\widgets\grid\CDataColumn.php(131): CComponent->evaluateExpression('$data->patientc...', Array)
+#4 C:\xampp\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(144): CDataColumn->renderDataCellContent(0, Object(Patientopthalmologicaldata))
+#5 C:\xampp\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(589): CGridColumn->renderDataCell(0)
+#6 C:\xampp\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(545): CGridView->renderTableRow(0)
+#7 C:\xampp\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(455): CGridView->renderTableBody()
+#8 C:\xampp\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(160): CGridView->renderItems()
+#9 [internal function]: CBaseListView->renderSection(Array)
+#10 C:\xampp\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#11 C:\xampp\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(128): CBaseListView->renderContent()
+#12 C:\xampp\xampp\htdocs\yii\framework\web\CBaseController.php(173): CBaseListView->run()
+#13 C:\xampp\xampp\htdocs\gen\protected\views\patientopthalmologicaldata\index.php(29): CBaseController->widget('zii.widgets.gri...', Array)
+#14 C:\xampp\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\xampp\...')
+#15 C:\xampp\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\xampp\...', Array, true)
+#16 C:\xampp\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\xampp\...', Array, true)
+#17 C:\xampp\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#18 C:\xampp\xampp\htdocs\gen\protected\controllers\PatientopthalmologicaldataController.php(148): CController->render('index', Array)
+#19 [internal function]: PatientopthalmologicaldataController->actionIndexOfPatient('13')
+#20 C:\xampp\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PatientopthalmologicaldataController), Array)
+#21 C:\xampp\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PatientopthalmologicaldataController), Object(ReflectionMethod), Array)
+#22 C:\xampp\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 C:\xampp\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 C:\xampp\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 C:\xampp\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 C:\xampp\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 C:\xampp\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 C:\xampp\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#29 C:\xampp\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 C:\xampp\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexOfPatient')
+#31 C:\xampp\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('patientopthalmo...')
+#32 C:\xampp\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#33 C:\xampp\xampp\htdocs\gen\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/gen/index.php/patientopthalmologicaldata/indexOfPatient/13
+HTTP_REFERER=http://localhost:8080/gen/index.php/patient/13
+---
