@@ -32,7 +32,7 @@ $this->breadcrumbs=array(
 )); ?>
 
 
-<h1>Ophtalmology Part </h1>
+<h1>Ophthalmology Part </h1>
 <!-- for each eye test -->
 <h3>Visual acuity tests</h3>
 <hr/>
