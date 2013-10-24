@@ -4,7 +4,7 @@
 $this->layout ='//layouts/column1';
 $this->breadcrumbs=array(
 	'Patients'=>array('/patient/index'),
-	$model->patientid=>array('/patient/view','id'=>$model->patientid),
+	$model->patientid=>array('/patientopthalmologicaldata/indexofpatient','id'=>$model->patientid),
         $model->id=>array('/patientopthalmologicaldata/view','id'=>$model->id),
 	'Phenotype data',
 );
