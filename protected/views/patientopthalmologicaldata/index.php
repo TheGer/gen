@@ -21,6 +21,7 @@ $this->menu=array(
 	'dataProvider'=>$dataProvider,
 	'columns'=>array('id',
              array('header'=>'Center id A','value'=>'$data->patient->patientcenters[0]->centeridA'),
+            array('header'=>'Responsible Physician','value'=>'$data->patient->patientcenters[0]->doctoridA'),
             'examinationdate',
              array(
 			'class'=>'CButtonColumn',
