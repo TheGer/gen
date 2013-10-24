@@ -26,25 +26,17 @@ $form = $this->beginWidget('CActiveForm', array(
         <?php echo $form->hiddenField($model,'patientid'); ?>
         
         
-    <div class="row">
-<?php echo $form->labelEx($model, 'modeofinheritance'); ?>
-        <?php echo $form->dropDownList($model, 'modeofinheritance', GeneralUtils::enumItem($model, 'modeofinheritance')); ?>
-        <?php echo $form->error($model, 'modeofinheritance'); ?>
-    </div>
+
 
 
 
     <div class="row">
-<?php echo $form->labelEx($model, 'allellestatus'); ?>
-        <?php echo $form->dropDownList($model, 'allellestatus', GeneralUtils::enumItem($model, 'allellestatus')); ?>
-        <?php echo $form->error($model, 'allellestatus'); ?>
+<?php echo $form->labelEx($model, 'levelofcertainty'); ?>
+        <?php echo $form->dropDownList($model, 'levelofcertainty', GeneralUtils::enumItem($model, 'levelofcertainty')); ?>
+        <?php echo $form->error($model, 'levelofcertainty'); ?>
     </div>
 
-    <div class="row">
-<?php echo $form->labelEx($model, 'dnasample'); ?>
-        <?php echo $form->dropDownList($model, 'dnasample', GeneralUtils::enumItem($model, 'dnasample')); ?>
-        <?php echo $form->error($model, 'dnasample'); ?>
-    </div>
+ 
 
     <div class="row">
 <?php echo $form->labelEx($model, 'screenedformutations'); ?>
@@ -72,11 +64,6 @@ $form = $this->beginWidget('CActiveForm', array(
 
 
 
-    <div class="row">
-<?php echo $form->labelEx($model, 'levelofcertainty'); ?>
-        <?php echo $form->dropDownList($model, 'levelofcertainty', GeneralUtils::enumItem($model, 'levelofcertainty')); ?>
-        <?php echo $form->error($model, 'levelofcertainty'); ?>
-    </div>
 
     <div class="row buttons">
 <?php echo CHtml::submitButton('Save'); ?>

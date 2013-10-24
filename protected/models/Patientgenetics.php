@@ -13,6 +13,12 @@
  * @property string $screenedformutations
  * @property string $dateofscreening
  * @property string $responsiblemutation
+ * @property string $sampletype;
+ * @property string $analysismethod;
+ * @property string $ushertypeconfirmed;
+ * @property string $responsiblegene;
+ * @property string $comments
+ * 
  * @property Geneticscreenedgene[] $screenedgenes
  * @property Geneticmutation[] $mutations
  *
@@ -57,7 +63,7 @@ class Patientgenetics extends CActiveRecord
 			array('dateofscreening', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, patientid, modeofinheritance, levelofcertainty, allellestatus, dnasample, screenedformutations, dateofscreening, responsiblemutation', 'safe', 'on'=>'search'),
+			array('id, patientid,sampletype,analysismethod,ushertypeconfirmed,responsiblegene,comments, modeofinheritance, levelofcertainty, allellestatus, dnasample, screenedformutations, dateofscreening, responsiblemutation', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -102,6 +108,12 @@ class Patientgenetics extends CActiveRecord
 			'screenedformutations' => 'Screened for mutations',
 			'dateofscreening' => 'Date of screening',
 			'responsiblemutation' => 'Responsible mutation',
+                        'sampletype'=>'Sample type',
+                        'analysismethod'=>'Analysis method',
+                        'ushertypeconfirmed'=>'Usher type confirmed',
+                        'responsiblegene'=>'Responsible gene',
+                        'comments'=>'Comments',
+                    
 		);
 	}
 
