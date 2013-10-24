@@ -418,39 +418,6 @@
         <?php echo $form->error($model, 'numberofaffectedfamilymembers'); ?>
     </div>
 
-    
-   
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'actualsystemictreatment'); ?>
-		<?php echo $form->textField($model,'actualsystemictreatment',array('size'=>14,'maxlength'=>14)); ?>
-		<?php echo $form->error($model,'actualsystemictreatment'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'actualvitamin'); ?>
-		<?php echo $form->textField($model,'actualvitamin',array('size'=>14,'maxlength'=>14)); ?>
-		<?php echo $form->error($model,'actualvitamin'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'surgeries'); ?>
-		<?php echo $form->textField($model,'surgeries',array('size'=>14,'maxlength'=>14)); ?>
-		<?php echo $form->error($model,'surgeries'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'traumas'); ?>
-		<?php echo $form->textField($model,'traumas',array('size'=>14,'maxlength'=>14)); ?>
-		<?php echo $form->error($model,'traumas'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'systemicinfections'); ?>
-		<?php echo $form->textField($model,'systemicinfections',array('size'=>14,'maxlength'=>14)); ?>
-		<?php echo $form->error($model,'systemicinfections'); ?>
-	</div>
-    
     <div class="row buttons">
         <?php echo CHtml::submitButton('Save'); ?>
     </div>

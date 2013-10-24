@@ -29,7 +29,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'buttons' => array
             (
                 'print'=>array(
-                    'label'=>'Print record to pdf',
+                    'label'=>'Print',
                     'url'=>'Yii::app()->createUrl("patient/createpdf",array("id"=>$data->id))'
                 )
             )

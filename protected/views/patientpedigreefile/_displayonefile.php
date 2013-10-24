@@ -7,11 +7,11 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->id), array('/patientpedigreefile/view', 'id'=>$data->id)); ?>
 	<br />
-
+<!--
 	<b><?php echo CHtml::encode($data->getAttributeLabel('patientid')); ?>:</b>
 	<?php echo CHtml::encode($data->patientid); ?>
 	<br />
-
+-->
 	<b><?php echo CHtml::encode($data->getAttributeLabel('comment')); ?>:</b>
 	<?php echo CHtml::encode($data->comment); ?>
 	<br />

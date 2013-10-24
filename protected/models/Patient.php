@@ -123,9 +123,9 @@ class Patient extends CActiveRecord {
         return array(
             //     array('hearingproblemslevel, communcationmode, hearingdevicead, hearingdeviceas, cochlearad, cochlearas', 'required'),
             array('diagnosis, scotome, nightblindnessage, phosphenes, decreasedvisualacage, sensibilitytolightage, colourvisionage, sidevisionage, nystagmus, numberofaffectedfamilymembers, numberofchildrenaffected, numberofchildrennonaffected, numberofchildrenunknownstatus, numberofsiblingsaffected, numberofsiblingsnotaffected, numberofsiblingsunknown, numberoftwinsaffected, numberoftwinsnotaffected, numberoftwinsunknown,opthalmologytrauma, opthalmologyinfection, walkingage, articulationage, hearingproblems, cochlearad, cochlearas, height, weight', 'numerical', 'integerOnly' => true),
-            array('systemid, gender, placeofbirth,affectedfamilymembers, informedconsent, confirmedby, secondarydiagnosisexisting, sensibilitytolight, clearvision, sidevision, readingdifficulties, parentsorigin,motherorigin, siblings, twins, pedigreeavailable, othersurgery, crfaffirmation,crfform,excludeform,excludeaffirmation', 'length', 'max' => 100),
+            array('systemid, gender, placeofbirth,affectedfamilymembers, informedconsent, confirmedby, secondarydiagnosisexisting, sensibilitytolight, clearvision, sidevision, readingdifficulties, parentsorigin,motherorigin, siblings, twins, pedigreeavailable, othersurgery, crfaffirmation,crfform,excludeform,excludeaffirmation, actualsystemictreatment, actualvitamin, surgeries, traumas, systemicinfections', 'length', 'max' => 100),
             array('confirmedmutation', 'length', 'max' => 3),
-            array('sporadicorfamily, cosanguinity, children, participationform, actualsystemictreatment, actualvitamin, surgeries, traumas, systemicinfections', 'length', 'max' => 14),
+            array('sporadicorfamily, cosanguinity, children, participationform', 'length', 'max' => 14),
             array('actualvisiualrehabilitation', 'length', 'max' => 7),
             array('hearingcharacter, hearingdevicead, hearingdeviceas', 'length', 'max' => 11),
             array('hearingproblemslevel', 'length', 'max' => 8),
