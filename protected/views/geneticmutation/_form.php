@@ -26,58 +26,41 @@ $url = '/geneticmutation/' . $action . '/'.$model->id;
 		<?php echo $form->error($model,'patientlocusid'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'firstallel'); ?>
-		<?php echo $form->dropDownList($model, 'firstallel', GeneralUtils::enumItem($model,'firstallel'), array('empty' => 'Not applicable')); ?>
-		<?php echo $form->error($model,'firstallel'); ?>
+        <div class="row">
+		<?php echo $form->labelEx($model,'responsiblegene'); ?>
+		<?php echo $form->dropDownList($model, 'responsiblegene', GeneralUtils::enumItem($model,'responsiblegene'), array('empty' => 'Not applicable')); ?>
+		<?php echo $form->error($model,'responsiblegene'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'firstallelmutation'); ?>
-		<?php echo $form->textField($model,'firstallelmutation',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'firstallelmutation'); ?>
+  <div class="row">    
+        
+        <?php echo $form->labelEx($model, 'nomenclaturedna'); ?>
+        <?php echo $form->textArea($model, 'nomenclaturedna', array('rows' => 6, 'cols' => 50)); ?>
+        <?php echo $form->error($model, 'nomenclaturedna'); ?>
+    </div>
+        
+          <div class="row">    
+        
+        <?php echo $form->labelEx($model, 'nomenclatureprotein'); ?>
+        <?php echo $form->textArea($model, 'nomenclatureprotein', array('rows' => 6, 'cols' => 50)); ?>
+        <?php echo $form->error($model, 'nomenclatureprotein'); ?>
+    </div>
+        <div class="row">
+		<?php echo $form->labelEx($model,'classificationlist'); ?>
+		<?php echo $form->dropDownList($model, 'classificationlist', GeneralUtils::enumItem($model,'classificationlist'), array('empty' => 'Not applicable')); ?>
+		<?php echo $form->error($model,'classificationlist'); ?>
 	</div>
-
+        
 	<div class="row">
-		<?php echo $form->labelEx($model,'secondallel'); ?>
-		<?php echo $form->dropDownList($model, 'secondallel', GeneralUtils::enumItem($model,'secondallel'), array('empty' => 'Not applicable')); ?>
-		<?php echo $form->error($model,'secondallel'); ?>
+		<?php echo $form->labelEx($model,'typeofmutation'); ?>
+		<?php echo $form->dropDownList($model, 'typeofmutation', GeneralUtils::enumItem($model,'typeofmutation'), array('empty' => 'Not applicable')); ?>
+		<?php echo $form->error($model,'typeofmutation'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'secondallelmutation'); ?>
-		<?php echo $form->textField($model,'secondallelmutation',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'secondallelmutation'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'thirdallel'); ?>
-		<?php echo $form->dropDownList($model, 'thirdallel', GeneralUtils::enumItem($model,'thirdallel'), array('empty' => 'Not applicable')); ?>
-		<?php echo $form->error($model,'thirdallel'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'thirdallelmutation'); ?>
-		<?php echo $form->textField($model,'thirdallelmutation',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'thirdallelmutation'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'fourthallel'); ?>
-		<?php echo $form->dropDownList($model, 'fourthallel', GeneralUtils::enumItem($model,'fourthallel'), array('empty' => 'Not applicable')); ?>
-		<?php echo $form->error($model,'fourthallel'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'fourthallelmutation'); ?>
-		<?php echo $form->textField($model,'fourthallelmutation',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'fourthallelmutation'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'mutationtype'); ?>
-		<?php echo $form->dropDownList($model, 'mutationtype', GeneralUtils::enumItem($model,'mutationtype'), array('empty' => 'Not applicable')); ?>
-		<?php echo $form->error($model,'mutationtype'); ?>
+        
+        <div class="row">
+		<?php echo $form->labelEx($model,'allele'); ?>
+		<?php echo $form->dropDownList($model, 'allele', GeneralUtils::enumItem($model,'allele'), array('empty' => 'Not applicable')); ?>
+		<?php echo $form->error($model,'allele'); ?>
 	</div>
 
 	<div class="row buttons">

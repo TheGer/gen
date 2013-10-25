@@ -17,6 +17,11 @@
  * @property string $fourthallel
  * @property string $fourthallelmutation
  * @property string $mutationtype
+ * @property string $responsiblegene
+ * @property string $nomenclaturedna
+ * @property string $nomenclatureprotein
+ * @property string $classificationlist
+ * @property string $typeofmutation
  *
  * The followings are the available model relations:
  * @property Patientgenetics $patientgene
@@ -56,7 +61,7 @@ class Geneticmutation extends CActiveRecord
 			array('mutationtype', 'length', 'max'=>17),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, patientgeneid, patientlocusid, firstallel, firstallelmutation, secondallel, secondallelmutation, thirdallel, thirdallelmutation, fourthallel, fourthallelmutation, mutationtype', 'safe', 'on'=>'search'),
+			array('id, patientgeneid,responsiblegene,nomenclaturedna,nomenclatureprotein,classificationlist,typeofmutation, patientlocusid, firstallel, firstallelmutation, secondallel, secondallelmutation, thirdallel, thirdallelmutation, fourthallel, fourthallelmutation, mutationtype', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -90,7 +95,13 @@ class Geneticmutation extends CActiveRecord
 			'fourthallel' => 'Fourth allel',
 			'fourthallelmutation' => 'Fourth allel mutation',
 			'mutationtype' => 'Mutation type',
-                        'geneid'=>'Gene'
+                        'geneid'=>'Gene',
+                        'responsiblegene'=>'Responsible gene',
+                        'nomenclaturedna'=>'Nomenclature DNA',
+                        'nomenclatureprotein'=>'Nomenclature Protein',
+                        'classificationlist'=>'Classification List',
+                        'typeofmutation'=>'Type of mutation',
+                    
 		);
 	}
 
@@ -117,6 +128,10 @@ class Geneticmutation extends CActiveRecord
 		$criteria->compare('fourthallel',$this->fourthallel,true);
 		$criteria->compare('fourthallelmutation',$this->fourthallelmutation,true);
 		$criteria->compare('mutationtype',$this->mutationtype,true);
+                $criteria->compare('responsiblegene',$this->responsiblegene,true);
+                $criteria->compare('nomenclaturedna',$this->nomenclaturedna,true);
+                $criteria->compare('classificationlist',$this->classificationlist,true);
+                $criteria->compare('typeofmutation',$this->typeofmutation,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

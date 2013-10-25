@@ -25,9 +25,32 @@ $form = $this->beginWidget('CActiveForm', array(
 
         <?php echo $form->hiddenField($model,'patientid'); ?>
         
+       <div class="row">
+<?php echo $form->labelEx($model, 'sampletype'); ?>
+        <?php echo $form->dropDownList($model, 'sampletype', GeneralUtils::enumItem($model, 'sampletype')); ?>
+        <?php echo $form->error($model, 'sampletype'); ?>
+    </div>
+  
+           <div class="row">
+<?php echo $form->labelEx($model, 'analysismethod'); ?>
+        <?php echo $form->dropDownList($model, 'analysismethod', GeneralUtils::enumItem($model, 'analysismethod')); ?>
+        <?php echo $form->error($model, 'analysismethod'); ?>
+    </div>
+  
+        <h3>Genetic Analysis</h3>
         
-
-
+           <div class="row">
+<?php echo $form->labelEx($model, 'ushertypeconfirmed'); ?>
+        <?php echo $form->dropDownList($model, 'ushertypeconfirmed', GeneralUtils::enumItem($model, 'ushertypeconfirmed')); ?>
+        <?php echo $form->error($model, 'ushertypeconfirmed'); ?>
+    </div>
+  
+           <div class="row">
+<?php echo $form->labelEx($model, 'responsiblegene'); ?>
+        <?php echo $form->dropDownList($model, 'responsiblegene', GeneralUtils::enumItem($model, 'responsiblegene')); ?>
+        <?php echo $form->error($model, 'responsiblegene'); ?>
+    </div>
+  
 
 
     <div class="row">
@@ -62,7 +85,12 @@ $form = $this->beginWidget('CActiveForm', array(
         <?php echo $form->error($model, 'dateofscreening'); ?>
     </div>
 
-
+  <div class="row">    
+        
+        <?php echo $form->labelEx($model, 'comments'); ?>
+        <?php echo $form->textArea($model, 'comments', array('rows' => 6, 'cols' => 50)); ?>
+        <?php echo $form->error($model, 'comments'); ?>
+    </div>
 
 
     <div class="row buttons">
